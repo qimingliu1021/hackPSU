@@ -4,15 +4,16 @@ from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
 
 data = pd.read_excel("dataset.xlsx")
-column_a=df["Column A"]
-column_b=df["Column  B"]
-column_c=df["Column C"]
-column_d=df["Column D"]
-column_e=df["Column E"]
-column_g=df["Column G"]
-column_h=df["Column H"]
+column_a=data["Column A"]
+column_b=data["Column  B"]
+column_c=data["Column C"]
+column_d=data["Column D"]
+column_e=data["Column E"]
+column_g=data["Column G"]
+column_h=data["Column H"]
 
 print(data.columns)
+
 
 def plot_data_by_column_g(data_file, column_g, column_d, column_e):
  
