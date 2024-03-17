@@ -3,7 +3,7 @@ import tkinter as tk
 from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
 
-data = pd.read_excel("dataset.csv")
+data = pd.read_csv("dataset.csv")
 column_a=data["Column A"]
 column_b=data["Column  B"]
 column_c=data["Column C"]
@@ -19,7 +19,7 @@ def plot_data_by_column_g(data_file, column_g, column_d, column_e):
  
 
   
-   data = pd.read_excel(dataset)
+   data = pd.read_csv(dataset)
 
   
    grouped_data = data.groupby(column_e)
@@ -255,7 +255,7 @@ def signup(username, password, email):
 
     
 
- data = read_and_preprocess_data("air_quality_data.xlsx")
+ data = read_and_preprocess_data("dataset.csv")
  
 
 
