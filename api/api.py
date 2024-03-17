@@ -9,6 +9,36 @@ def get_current_time():
 
 
 @app.route('/test')
+def plot_data_by_column_g(data_file, column_g, column_d, column_e):
+ 
+
+  
+   data = pd.read_excel(data_file)
+
+  
+   grouped_data = data.groupby(column_e)
+
+   fig, axes = plt.subplots(nrows=len(grouped_data), figsize=(12, 8))  
+  
+   for idx, (category, group_data) in enumerate(grouped_data):
+    
+     g_data = group_data[column_g].tolist()
+     e_data = group_data[column_e].tolist()
+
+    
+     axes[idx].plot(e_data, g_data, marker='o', linestyle='-')
+     axes[idx].set_title(f"Category: {category}")
+     axes[idx].set_xlabel(column_e)
+     axes[idx].set_ylabel(column_g)
+     axes[idx].grid(True)
+
+
+   fig.suptitle(f"Plots of {column_g} for different categories in {column_e}")
+   plt.tight_layout()
+
+ 
+   plt.show()
+  
 
 @app.route('/test')
 def classify_air_quality(model, features, scaler=None):
