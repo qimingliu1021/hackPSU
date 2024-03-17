@@ -109,155 +109,154 @@ def get_picture_choice():
       except ValueError:
        print("Invalid input. Please enter a number.")
 
-# def choice():
-#     if choice == 1:
-#         print(" **Improve Ventilation:**")
-#         print("Do you want to get more precise help?")
-#         signup= input(signup(username, password,email))
-#         print("place type = house")
-#         area_sq_meters= input("enter area of the place in square meters :")
-#         n_trees=(0.60*area_sq_meters)//5
-#         if air_quality_value <= 50:
-#             n_trees=n_trees//2
-#             return n_trees
-#         elif air_quality_value <= 100:
-#             n_trees=n_trees*1.5
-#             return n_trees
-#         else:
-#             return n_trees
+def choice():
+  if choice == 1:
+    print(" **Improve Ventilation:**")
+    print("Do you want to get more precise help?")
+    signup= input(signup(username, password,email))
+         print("place type = house")
+         area_sq_meters= input("enter area of the place in square meters :")
+         n_trees=(0.60*area_sq_meters)//5
+         if air_quality_value <= 50:
+             n_trees=n_trees//2
+             return n_trees
+         elif air_quality_value <= 100:
+             n_trees=n_trees*1.5
+             return n_trees
+         else:
+             return n_trees
         
-#     if choice == 2:
-#         print(" **Improve Ventilation:**")
-#         print("Do you want to get more precise help?")
-#         signup= input(signup(username, password,email))
-#         print("place type = apartment")
-#         area_sq_meters= input("enter area of the place in square meters :")
-#         n_plants=(0.30*area_sq_meters)//1.5
-#         if air_quality_value <= 50:
-#             n_plants=n_plants//2
-#             return n_plants
-#         elif air_quality_value <= 100:
-#             n_plants=n_plants*2
-#             return n_plants
-#         else:
-#             return n_plants
+     if choice == 2:
+         print(" **Improve Ventilation:**")
+         print("Do you want to get more precise help?")
+         signup= input(signup(username, password,email))
+         print("place type = apartment")
+         area_sq_meters= input("enter area of the place in square meters :")
+         n_plants=(0.30*area_sq_meters)//1.5
+         if air_quality_value <= 50:
+             n_plants=n_plants//2
+             return n_plants
+         elif air_quality_value <= 100:
+             n_plants=n_plants*2
+             return n_plants
+         else:
+             return n_plants
 
-#     if choice == 3:
-#         print(" **Improve Ventilation:**")
-#         print("Do you want to get more precise help?")
-#         signup= input(signup(username, password,email))
-#         print("place type = office")
-#         area_sq_meters= input("enter area of the place in square meters :")
-#         n_plants=(0.75*area_sq_meters)//2
-#         if air_quality_value <= 50:
-#             n_plants=n_plants//2
-#             return n_plants
-#         elif air_quality_value <= 100:
-#             n_plants=n_plants*3
-#             return n_plants
-#         else:
-#             return n_plants
+     if choice == 3:
+         print(" **Improve Ventilation:**")
+         print("Do you want to get more precise help?")
+         signup= input(signup(username, password,email))
+         print("place type = office")
+         area_sq_meters= input("enter area of the place in square meters :")
+         n_plants=(0.75*area_sq_meters)//2
+         if air_quality_value <= 50:
+             n_plants=n_plants//2
+             return n_plants
+         elif air_quality_value <= 100:
+             n_plants=n_plants*3
+             return n_plants
+         else:             
+          return n_plants
 
      
 
                     
 
-# def signup(username, password, email):
+def signup(username, password, email):
   
 
-#   print(f"Username: {username}")
-#   print(f"Password: {password}")  
-#   print(f"Email: {email}")  
+   print(f"Username: {username}")
+   print(f"Password: {password}")  
+   print(f"Email: {email}")  
 
-#   print("Signup successful!")
+   print("Signup successful!")
 
-# #example
-# username = "johndoe"
-# password = "secret123"
-# email = "johndoe@example.com"
+ #example
+ username = "johndoe"
+ password = "secret123"
+ email = "johndoe@example.com"
 
-# signup(username, password, email)
+ signup(username, password, email)
 
-# class Plant:
+ class Plant:
  
 
-#   def __init__(self, place_type, area_sq_meters):
+   def __init__(self, place_type, area_sq_meters):
    
 #     self.place_type = place_type
-#     self.area_sq_meters = area_sq_meters
+     self.area_sq_meters = area_sq_meters
 
-#   def suitable_plant_types(self, category):
+   def suitable_plant_types(self, category):
     
-#     suggestions = []
-#     if category == "green plants":
-#       if self.place_type == "house":
-#         suggestions = ["Snake Plant", "Spider Plant", "Fiddle Leaf Fig"]
-#       elif self.place_type == "apartment":
-#         suggestions = ["ZZ Plant", "Pothos", "Air Plants"]
-#     elif category == "flowers":
-#       suggestions = ["Peace Lily", "African Violets", "Orchid"]
-#     elif category == "produce":
-#       if self.place_type == "house" and self.area_sq_meters > 50:
-#         suggestions = ["Cherry Tomato", "Peppers", "Dwarf Herbs"]
-#       else:
-#         suggestions = ["Mint", "Chives", "Microgreens"]
-#     return suggestions
+     suggestions = []
+     if category == "green plants":
+       if self.place_type == "house":
+         suggestions = ["Snake Plant", "Spider Plant", "Fiddle Leaf Fig"]
+       elif self.place_type == "apartment":
+         suggestions = ["ZZ Plant", "Pothos", "Air Plants"]
+     elif category == "flowers":
+       suggestions = ["Peace Lily", "African Violets", "Orchid"]
+     elif category == "produce":
+       if self.place_type == "house" and self.area_sq_meters > 50:
+         suggestions = ["Cherry Tomato", "Peppers", "Dwarf Herbs"]
+       else:
+         suggestions = ["Mint", "Chives", "Microgreens"]
+     return suggestions
 
-#   def suggest_big_trees(self):
+   def suggest_big_trees(self):
    
-#     if self.place_type == "house" and self.area_sq_meters > 100:
-#       return ["Rubber Tree", "Ficus Benjamina", "Monstera Deliciosa"]
-#     else:
-#       return []
+     if self.place_type == "house" and self.area_sq_meters > 100:
+       return ["Rubber Tree", "Ficus Benjamina", "Monstera Deliciosa"]
+     else:
+       return []
 
-#   def suggest_big_plants(self):
+   def suggest_big_plants(self):
    
-#     if self.place_type == "house" and self.area_sq_meters > 50:
-#       return self.suitable_plant_types("green plants")[:2]  
-#     else:
-#       return []
-
-#   def suggest_small_plants(self):
+     if self.place_type == "house" and self.area_sq_meters > 50:
+       return self.suitable_plant_types("green plants")[:2]  
+     else:
+       return []
+   def suggest_small_plants(self):
    
-#     return self.suitable_plant_types("green plants")[2:]
+     return self.suitable_plant_types("green plants")[2:]
 
-# def main():
+ def main():
   
-#   place_type = input("Enter place type (house/apartment/office/study space: ")
-#   area_sq_meters = float(input("Enter area of the place (square meters): "))
+   place_type = input("Enter place type (house/apartment/office/study space: ")
+   area_sq_meters = float(input("Enter area of the place (square meters): "))
 
-#   plant = Plant(place_type, area_sq_meters)
+   plant = Plant(place_type, area_sq_meters)
 
-#   print("** Big Trees (suitable for houses with >100 sqm): **")
-#   big_trees = plant.suggest_big_trees()
-#   if big_trees:
-#     for tree in big_trees:
-#       print(tree)
-#   else:
-#     print("Sorry, big trees are not suitable for this place.")
+   print("** Big Trees (suitable for houses with >100 sqm): **")
+   big_trees = plant.suggest_big_trees()
+   if big_trees:
+     for tree in big_trees:
+       print(tree)
+   else:
+     print("Sorry, big trees are not suitable for this place.")
 
-#   print("\n** Big Plants (suitable for houses with >50 sqm): **")
-#   big_plants = plant.suggest_big_plants()
-#   if big_plants:
-#     for plant in big_plants:
-#       print(plant)
-#   else:
-#     print("Sorry, big plants are not suitable for this place.")
+   print("\n** Big Plants (suitable for houses with >50 sqm): **")
+   big_plants = plant.suggest_big_plants()
+   if big_plants:
+     for plant in big_plants:
+       print(plant)
+   else:
+     print("Sorry, big plants are not suitable for this place.")
 
-#   print("\n** Small Plants (suitable for any place): **")
-#   small_plants = plant.suggest_small_plants()
-#   for plant in small_plants:
-#     print(plant)
+   print("\n** Small Plants (suitable for any place): **")
+   small_plants = plant.suggest_small_plants()
+   for plant in small_plants:
+     print(plant)
 
-# if __name__ == "__main__":
-#   main()
+ if __name__ == "__main__":
+   main()
 
 
 
     
 
-# data = read_and_preprocess_data("air_quality_data.xlsx")
-# web_app()
+ data = read_and_preprocess_data("air_quality_data.xlsx")
+ 
 
 
 # root = tk.Tk()
