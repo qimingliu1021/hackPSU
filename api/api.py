@@ -79,6 +79,11 @@ def classify_air_quality(model, features, scaler=None):
   return air_quality
 
 
-
+@app.route('/test')
+@app.route('/test')
+@app.route('/test')
+@app.route('/test')
+@app.route('/test')
+@app.route('/test')
 
 
