@@ -3,7 +3,7 @@ import tkinter as tk
 from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
 
-data = pd.read_excel("dataset.xlsx")
+data = pd.read_excel("dataset.csv")
 column_a=data["Column A"]
 column_b=data["Column  B"]
 column_c=data["Column C"]
@@ -19,7 +19,7 @@ def plot_data_by_column_g(data_file, column_g, column_d, column_e):
  
 
   
-   data = pd.read_excel(data_file)
+   data = pd.read_excel(dataset)
 
   
    grouped_data = data.groupby(column_e)
@@ -57,7 +57,7 @@ def search_data():
         result_label.config(text="No matching results found.")
     else:
         result_label.config(text=f"Value (column_g): {matching_data.iloc[0]['column_g']}")
-        plot_data_by_column_g("dataset.xlsx", column_g, column_e)
+        plot_data_by_column_g("dataset.csv", column_g, column_e)
 
 
 
