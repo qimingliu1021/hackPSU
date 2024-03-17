@@ -4,6 +4,13 @@ from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
 
 data = pd.read_excel("dataset.xlsx")
+column_a=df["Column A"]
+column_b=df["Column  B"]
+column_c=df["Column C"]
+column_d=df["Column D"]
+column_e=df["Column E"]
+column_g=df["Column G"]
+column_h=df["Column H"]
 
 print(data.columns)
 
@@ -37,18 +44,18 @@ def plot_data_by_column_g(data_file, column_g, column_d, column_e):
  
    plt.show()
   
-filtered_data = data[data["Column D"] > 2018]                                   
+filtered_data = data[data["column_e"] > 2018]                                   
 def search_data():
     search_term = search_var.get().lower()
     matching_data = filtered_data[
-        (filtered_data["Column B"].str.lower().contains(search_term))
-        | (filtered_data["Column C"].str.lower().contains(search_term))
+        (filtered_data["column_b"].str.lower().contains(search_term))
+        | (filtered_data["column_c"].str.lower().contains(search_term))
     ]
 
     if matching_data.empty:
         result_label.config(text="No matching results found.")
     else:
-        result_label.config(text=f"Value (Column G): {matching_data.iloc[0]['Column G']}")
+        result_label.config(text=f"Value (column_g): {matching_data.iloc[0]['column_g']}")
         plot_data_by_column_g("dataset.xlsx", column_g, column_e)
 
 
