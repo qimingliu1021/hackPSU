@@ -9,11 +9,11 @@ def get_current_time():
 
 
 @app.route('/test')
-def plot_data_by_column_g(data_file, column_g, column_d, column_e):
+def plot_data_by_column_g(dataset, column_g, column_d, column_e):
  
 
   
-   data = pd.read_excel(data_file)
+   data = pd.read_csv(dataset)
 
   
    grouped_data = data.groupby(column_e)
@@ -53,7 +53,7 @@ def search_data():
         result_label.config(text="No matching results found.")
     else:
         result_label.config(text=f"Value (column_g): {matching_data.iloc[0]['column_g']}")
-        plot_data_by_column_g("dataset.xlsx", column_g, column_e)
+        plot_data_by_column_g("dataset.csv", column_g, column_e)
 
 
 @app.route('/test')
