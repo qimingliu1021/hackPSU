@@ -183,7 +183,7 @@ def signup(username, password, email):
 
    def __init__(self, place_type, area_sq_meters):
    
-#     self.place_type = place_type
+     self.place_type = place_type
      self.area_sq_meters = area_sq_meters
 
    def suitable_plant_types(self, category):
