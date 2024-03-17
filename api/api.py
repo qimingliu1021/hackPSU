@@ -9,6 +9,8 @@ def get_current_time():
 
 
 @app.route('/test')
+
+@app.route('/test')
 def classify_air_quality(model, features, scaler=None):
 
  
