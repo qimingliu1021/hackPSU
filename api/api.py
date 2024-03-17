@@ -29,3 +29,5 @@ def classify_air_quality(model, features, scaler=None):
       air_quality.append("bad")
 
   return air_quality
+
+@app.route('/test')
