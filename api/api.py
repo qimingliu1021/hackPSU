@@ -38,7 +38,8 @@ def plot_data_by_column_g(data_file, column_g, column_d, column_e):
 
  
    plt.show()
-  
+
+@app.route('/test')
 
 @app.route('/test')
 def classify_air_quality(model, features, scaler=None):
