@@ -88,3 +88,35 @@ https://blog.miguelgrinberg.com/post/how-to-create-a-react--flask-project
 
 Reference website:
 https://developer.apple.com/
+
+Green plants
+https://www.goodhousekeeping.com/home/gardening/g32579496/best-bedroom-plants/
+
+### Page initialization:
+
+import { Box, Button, Typography, AppBar, Toolbar } from "@mui/material";
+import { useEffect, useState } from "react";
+
+const [currentPage, setCurrentPage] = useState("main");
+const navigate = (page) => {
+setCurrentPage(page);
+};
+<AppBar position="static">
+<Toolbar>
+<Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+AirQualityPlaces
+</Typography>
+<Button color="inherit" onClick={() => navigate("main")}>
+Home
+</Button>
+<Button color="inherit" onClick={() => navigate("airQualities")}>
+Air Qualities
+</Button>
+<Button color="inherit" onClick={() => navigate("store")}>
+Store
+</Button>
+<Button color="inherit" onClick={() => navigate("community")}>
+Join the Community
+</Button>
+</Toolbar>
+</AppBar>

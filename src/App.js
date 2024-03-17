@@ -1,24 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useEffect, useState } from "react";
+import MainPage from "./MainPage/MainPage";
+import Choice from "./Choice/Choice";
+import { Box, Card, Typography, Input } from "@mui/material";
+import PlantStore from "./plant_store/PlantStore";
+import Apartments from "./apartments/Apartments";
+import Houses from "./houses/Houses";
+import Preference from "./Preference/Preference";
 
 function App() {
+  const [currentPage, setCurrentPage] = useState("main");
+
+  // For backend connection
+  const [currentTime, setCurrentTime] = useState(0);
+
+  // useEffect(() => {
+  //   fetch("http://127.0.0.1:5000/time");
+  //   .then((res) => res.json())
+  //   .then((data) => {
+  //     console.log(data);
+  //     setCurrentTime(data.time);
+  //   });
+  // }, []);
+
+  const renderPage = () => {
+    switch (currentPage) {
+      case "choice":
+        return <Choice onNavigate={setCurrentPage} />;
+      case "store":
+        return <PlantStore onNavigate={setCurrentPage} />;
+      default:
+        return <MainPage onNavigate={setCurrentPage} />;
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Box>
+      {/* <p>The current time is {currentTime}.</p> */}
+      {/* {renderPage()} */}
+      <MainPage />
+      {/* <Choice /> */}
+      {/* <PlantStore /> */}
+      {/* <Apartments /> */}
+      {/* <Houses /> */}
+      {/* <Preference /> */}
+    </Box>
   );
 }
 
